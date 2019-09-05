@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: lightgray;
+    &:hover,&:focus {
+        color: #fff;
+        background-color: #53A3CD;
+        border-color: #53A3CD;
+    }
+}
