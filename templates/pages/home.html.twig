@@ -1,7 +1,27 @@
 {% extends 'base.html.twig' %}
 
+{% block title 'Agence Lorem' %}
+
 {% block body %}
+    <div class="container mt-4">
+        <h1>Agence Lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet aut dolorem dolores, dolorum ipsa
+            laboriosam maiores mollitia nesciunt nostrum optio qui tempora vitae, voluptates voluptatibus voluptatum.
+            Excepturi, officia.</p>
+    </div>
     <div class="container">
-        <h1>Symfony 4</h1>
+        <h2>Les derniers biens</h2>
+        {% for property in properties %}
+            <div class="col-3">
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a></div>
+                    <div class="card-body">
+                        <p class="card-text">{{ property.city }}, {{ property.postalCode }}</p>
+                        <p class="text-primary">{{ property.formatedPrice }} €</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
