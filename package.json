@@ -18,6 +18,6 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "node-sass": "^4.12.0"
+        "node-sass": "^7.0.0"
     }
 }
